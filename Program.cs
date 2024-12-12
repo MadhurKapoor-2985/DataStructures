@@ -1,5 +1,25 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+
+StackTest();
+
+void StackTest() {
+    DataStructures.Stack stack = new DataStructures.Stack();
+
+    stack.Push("Madhur");
+    stack.Push("Salony");
+    stack.Push("Henry");
+
+    Console.WriteLine($"Peek - {stack.Peek()}");
+    stack.Pop();
+    stack.Pop();
+    stack.Pop();
+    stack.Push("Reeshan");
+    stack.Pop();
+    stack.Pop();
+}
+
+void LinkListTest() {
+    Console.WriteLine("Hello, World!");
 
 LinkList list = new LinkList();
 list.Append("Madhur");
@@ -26,3 +46,4 @@ list.PrintElements();
 list.Remove(2);
 Console.WriteLine("After Removal");
 list.PrintElements();
+}
