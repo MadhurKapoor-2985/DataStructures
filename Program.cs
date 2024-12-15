@@ -1,6 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-StackTest();
+//StackTest();
+QueueTest();
+
 
 void StackTest() {
     DataStructures.Stack stack = new DataStructures.Stack();
@@ -14,6 +16,9 @@ void StackTest() {
     stack.Pop();
     stack.Pop();
     stack.Push("Reeshan");
+    stack.Push("Alex");
+    stack.Push("Jimmy");
+    stack.PeekAll();
     stack.Pop();
     stack.Pop();
 }
@@ -46,4 +51,25 @@ list.PrintElements();
 list.Remove(2);
 Console.WriteLine("After Removal");
 list.PrintElements();
+}
+
+ void QueueTest() {
+
+    DataStructures.Queue queue = new DataStructures.Queue();
+
+    queue.Enqueue("Madhur");
+    queue.Enqueue("Salony");
+    queue.Enqueue("Henry");
+
+    //Console.WriteLine($"Peek - {queue.()}");
+    queue.Dequeye();
+    queue.Dequeye();
+    queue.Dequeye();
+    queue.Enqueue("Reeshan");
+    queue.Enqueue("Alex");
+    queue.Enqueue("Jimmy");
+   // queue.PeekAll();
+    queue.Dequeye();
+    queue.Dequeye();
+
 }

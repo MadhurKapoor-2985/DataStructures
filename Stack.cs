@@ -53,6 +53,15 @@ namespace DataStructures
             
         }
 
+        public void PeekAll() {
+            var temp = Top;
+            Console.WriteLine("Peeking through all Stack elements");
+            while(temp != null) {
+                Console.WriteLine(temp.Value);
+                temp = temp.Next;
+            }
+        }
+
         public bool isEmpty() {
             return Length == 0;
         }
