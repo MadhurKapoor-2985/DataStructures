@@ -1,8 +1,11 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 //StackTest();
-QueueTest();
+using DataStructures;
 
+//QueueTest();
+
+BinarySearchTreeTest();
 
 void StackTest() {
     DataStructures.Stack stack = new DataStructures.Stack();
@@ -21,6 +24,24 @@ void StackTest() {
     stack.PeekAll();
     stack.Pop();
     stack.Pop();
+}
+
+void BinarySearchTreeTest() {
+    BinarySearchTree tree = new BinarySearchTree();
+
+    tree.Insert(5);
+    tree.Insert(89);
+    tree.Insert(15);
+    tree.Insert(24);
+    tree.Insert(67);
+    tree.Insert(90);
+
+    if(tree.Lookup(567)) {
+        Console.WriteLine("Found");
+    }
+    if(!tree.Lookup(4)) {
+        Console.WriteLine("Not Found");
+    }
 }
 
 void LinkListTest() {

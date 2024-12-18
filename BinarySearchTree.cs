@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 
 namespace DataStructures
@@ -38,6 +39,27 @@ namespace DataStructures
                     current = current.Right;
                 }
             }
+        }
+
+        public bool Lookup(int value){
+            if(Root == null) {
+                return false;
+            }
+
+            var currentNode = Root;
+
+            while(currentNode != null) {
+                if(value < currentNode.Value) {
+                    currentNode = currentNode.Left;
+                }
+                else if(value > currentNode.Value) {
+                    currentNode = currentNode.Right;
+                }
+                else if(value == currentNode.Value) {
+                    return true;
+                }
+            }
+            return false;
         }
 
     }
